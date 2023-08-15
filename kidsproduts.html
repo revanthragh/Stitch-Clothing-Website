@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kidproduuts</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- for swiper slider  -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!-- fancy box  -->
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+    <style>
+        .navbar {
+            top: 0;
+            width: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .jumbotron {
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px;
+            transition: background-image 1s ease-in-out;
+        }
+
+        .jumbotron.background-1 {
+            background-image: url('background1.jpg');
+        }
+
+        .jumbotron.background-2 {
+            background-image: url('background2.jpg');
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 30px;
+        }
+
+        .btn-shop {
+            background-color: #f0c14b;
+            color: #000;
+            font-size: 24px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            margin-top: 50px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-card img {
+            max-width: 100%;
+            margin-bottom: 20px;
+
+        }
+
+        .product-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .product-card p {
+            font-size: 16px;
+            padding: 10px;
+        }
+
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-item .dropdown-menu {
+            min-width: 200px;
+        }
+
+        .navbar-nav .nav-item .dropdown-menu .dropdown-item {
+            font-size: 18px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        header {
+            background-color: #333;
+            background-image: url('https://wallpapercave.com/dwp1x/wp6947243.jpg');
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .grid-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .grid-item img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .grid-item h2 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .grid-item p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 90px;
+            color: #333;
+            margin-bottom: 0px;
+        }
+        .dropdown-menu:hover{
+            background-image: -moz-repeating-linear-gradient();
+              
+        }
+        .footer1 {
+            background-color: #f8f9fa;
+            padding: 30px;
+            color: rgb(0, 0, 0);
+          }
+          
+          .marquee {
+            overflow: hidden;
+            white-space: nowrap;
+            animation: marquee 15s linear infinite;
+            color: rgb(0, 0, 0);
+          }
+          
+          @keyframes marquee {
+            0% {
+              transform: translateX(100%);
+            }
+            100% {
+              transform: translateX(-100%);
+            }
+          }
+
+        footer p {
+            margin: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">
+                <h2>Stitch</h2>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Men
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="menproduts.html">Shirts</a>
+                            <a class="dropdown-item" href="menproduts.html">Pants</a>
+                            <a class="dropdown-item" href="menproduts.html">Shoes</a>
+                            <a class="dropdown-item" href="menproduts.html">Accessories</a>
+                            <div>
+                                <img src="https://www.koovs.com/cdn/shop/files/Screenshot_2022-11-10_at_5.37.53_PM.png?v=1668083230&width=533" alt="Product 1">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Women
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="womenproduts.html">Shirts</a>
+                            <a class="dropdown-item" href="womenproduts.html">Pants</a>
+                            <a class="dropdown-item" href="womenproduts.html">Shoes</a>
+                            <a class="dropdown-item" href="womenproduts.html">Accessories</a>
+                            <div>
+                                <img src="https://www.koovs.com/cdn/shop/files/HEARTGRAPHICOVERSIZEDT-SHIRTDRESS-BLUE8_800x.jpg-2.webp?v=1683877829&width=360" alt="Product 1">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Kids
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="kidsproduts.html">Shirts</a>
+                            <a class="dropdown-item" href="kidsproduts.html">Pants</a>
+                            <a class="dropdown-item" href="kidsproduts.html">Shoes</a>
+                            <a class="dropdown-item" href="kidsproduts.html">Accessories</a>
+                            <div>
+                                <img src="https://static.zara.net/photos///2023/V/0/3/p/1538/671/427/305/w/384/1538671427_1_1_1.jpg?ts=1684421116858" alt="Product 1">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sale
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="saleproducts.html">Shirts</a>
+                            <a class="dropdown-item" href="saleproducts.html">Pants</a>
+                            <a class="dropdown-item" href="saleproducts.html">Shoes</a>
+                            <a class="dropdown-item" href="saleproducts.html">Accessories</a>
+                            <div>
+                                <img src="https://static.zara.net/photos///2023/V/0/3/p/8367/504/427/402/w/608/8367504427_1_1_1.jpg?ts=1674217577943" alt="Product 1">
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+            </div>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+
+
+<br>
+  <center>
+  <h1>Best Sellers</h1>
+  </center>
+
+    <div class="grid-container">
+        <!-- Product 1 -->
+        <div class="grid-item">
+            <img src="https://static.zara.net/photos///2023/I/0/3/p/7878/731/427/302/w/608/7878731427_15_1_1.jpg?ts=1684751279855" alt="Product 1">
+            <h2>Product 1</h2>
+            <p>Description of Product 1</p>
+            <p>Price: $XX</p>
+            <div class="product">
+                <button class="add-to-bag" onclick="addToBag('Product Title', 'Product Description')">Add to
+                    Bag</button>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="grid-item">
+            <img src="https://static.zara.net/photos///2023/V/0/3/p/1879/661/800/2/w/298/1879661800_6_1_1.jpg?ts=1677575145572" alt="Product 2">
+            <h2>Product 2</h2>
+            <p>Description of Product 2</p>
+            <p>Price: $XX</p>
+            <div class="product">
+                <button class="add-to-bag" onclick="addToBag('Product Title', 'Product Description')">Add to
+                    Bag</button>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="grid-item">
+            <img src="https://static.zara.net/photos///2023/V/0/3/p/7878/678/500/302/w/767/7878678500_15_1_1.jpg?ts=1684766920521" alt="Product 2">
+            <h2>Product 2</h2>
+            <p>Description of Product 2</p>
+            <p>Price: $XX</p>
+            <div class="product">
+                <button class="add-to-bag" onclick="addToBag('Product Title', 'Product Description')">Add to
+                    Bag</button>
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+    <center>
+    <h1>Hoodies</h1>
+    </center>
+    <div class="grid-container">
+        <!-- Product 1 -->
+        <div class="grid-item">
+            <img src="https://static.zara.net/photos///2023/V/0/3/p/4676/770/800/302/w/608/4676770800_1_1_1.jpg?ts=1684492567365" alt="Product 1">
+            <h2>Product 1</h2>
+            <p>Description of Product 1</p>
+            <p>Price: $XX</p>
+            <div class="product">
+                <button class="add-to-bag" onclick="addToBag('Product Title', 'Product Description')">Add to
+                    Bag</button>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="grid-item">
+            <img src="https://static.zara.net/photos///2023/V/0/3/p/2646/799/804/302/w/767/2646799804_1_1_1.jpg?ts=1684492567369" alt="Product 2">
+            <h2>Product 2</h2>
+            <p>Description of Product 2</p>
+            <p>Price: $XX</p>
+            <div class="product">
+                <button class="add-to-bag" onclick="addToBag('Product Title', 'Product Description')">Add to
+                    Bag</button>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="grid-item">
+            <img src="https://static.zara.net/photos///2023/V/0/3/p/5644/908/615/302/w/727/5644908615_1_1_1.jpg?ts=1684492567462" alt="Product 2">
+            <h2>Product 2</h2>
+            <p>Description of Product 2</p>
+            <p>Price: $XX</p>
+            <div class="product">
+                <button class="add-to-bag" onclick="addToBag('Product Title', 'Product Description')">Add to
+                    Bag</button>
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+    <center>
+    <h1>Out Ware</h1>
+    </center>
+    <div class="grid-container">
+        <!-- Product 1 -->
+        <div class="grid-item">
+            <img src="https://static.zara.net/photos///2023/V/0/3/p/1538/671/427/305/w/767/1538671427_1_1_1.jpg?ts=1684421116858" alt="Product 1">
+            <h2>Product 1</h2>
+            <p>Description of Product 1</p>
+            <p>Price: $XX</p>
+            <div class="product">
+                <button class="add-to-bag" onclick="addToBag('Product Title', 'Product Description')">Add to
+                    Bag</button>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="grid-item">
+            <img src="https://static.zara.net/photos///2023/V/0/3/p/5854/752/800/2/w/750/5854752800_6_1_1.jpg?ts=1677659344680" alt="Product 2">
+            <h2>Product 2</h2>
+            <p>Description of Product 2</p>
+            <p>Price: $XX</p>
+            <div class="product">
+                <button class="add-to-bag" onclick="addToBag('Product Title', 'Product Description')">Add to
+                    Bag</button>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="grid-item">
+            <img src="https://static.zara.net/photos///2023/V/0/3/p/5431/671/500/2/w/750/5431671500_6_2_1.jpg?ts=1671694938046" alt="Product 2">
+            <h2>Product 2</h2>
+            <p>Description of Product 2</p>
+            <p>Price: $XX</p>
+            <div class="product">
+                <button class="add-to-bag" onclick="addToBag('Product Title', 'Product Description')">Add to
+                    Bag</button>
+            </div>
+        </div>
+
+    </div>
+    <br>
+  <center>
+  <h1>Boots</h1>
+  </center>
+    <div class="grid-container">
+        <!-- Product 1 -->
+        <div class="grid-item">
+            <img src="https://static.zara.net/photos///2023/V/1/3/p/3202/130/805/2/w/750/3202130805_6_3_1.jpg?ts=1667221816958" alt="Product 1">
+            <h2>Product 1</h2>
+            <p>Description of Product 1</p>
+            <p>Price: $XX</p>
+            <div class="product">
+                <button class="add-to-bag" onclick="addToBag('Product Title', 'Product Description')">Add to
+                    Bag</button>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="grid-item">
+            <img src="https://static.zara.net/photos///2023/V/1/3/p/3340/130/808/2/w/750/3340130808_6_3_1.jpg?ts=1676035406957" alt="Product 2">
+            <h2>Product 2</h2>
+            <p>Description of Product 2</p>
+            <p>Price: $XX</p>
+            <div class="product">
+                <button class="add-to-bag" onclick="addToBag('Product Title', 'Product Description')">Add to
+                    Bag</button>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="grid-item">
+            <img src="https://static.zara.net/photos///2023/I/1/3/p/3452/130/001/2/w/750/3452130001_6_3_1.jpg?ts=1684415901213" alt="Product 2">
+            <h2>Product 2</h2>
+            <p>Description of Product 2</p>
+            <p>Price: $XX</p>
+            <div class="product">
+                <button class="add-to-bag" onclick="addToBag('Product Title', 'Product Description')">Add to
+                    Bag</button>
+            </div>
+        </div>
+
+    </div>
+    
+    <footer class="footer1">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="marquee">
+                <span>Special offer: 10% off on all clothing items! Limited time only. | Free shipping on orders over $50.</span>
+              </div>
+              <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <p>Phone: 123-456-7890</p>
+                <p>Email: info@example.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <footer>
+        <p>&copy; 2023 Clothing Website. All rights reserved.</p>
+    </footer>
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            var backgrounds = ['product.jpg', 'background2.jpg'];
+            var currentIndex = 0;
+
+            function changeBackground() {
+                $('.jumbotron').removeClass('background-' + currentIndex);
+
+                currentIndex = (currentIndex + 1) % backgrounds.length;
+                $('.jumbotron').addClass('background-' + currentIndex);
+            }
+
+            setInterval(changeBackground, 2000);
+        });
+
+
+
+        function addToBag(title, description) {
+            // Retrieve the product details
+            var productDetails = {
+                title: title,
+                description: description
+            };
+
+            // Check if local storage is available
+            if (typeof (Storage) !== "undefined") {
+                // Retrieve existing bag items from local storage
+                var bagItems = JSON.parse(localStorage.getItem("bagItems")) || [];
+
+                // Add the product details to the bag
+                bagItems.push(productDetails);
+
+                // Store the updated bag items in local storage
+                localStorage.setItem("bagItems", JSON.stringify(bagItems));
+
+                // Display a confirmation message
+                alert("Product added to bag!");
+            } else {
+                // Local storage is not available
+                alert("Sorry, your browser does not support local storage. Product cannot be added to bag.");
+            }
+        }
+
+
+        function viewBag() {
+            // Retrieve the bag items from local storage
+            var bagItems = JSON.parse(localStorage.getItem("bagItems"));
+
+            // Check if any items are in the bag
+            if (bagItems && bagItems.length > 0) {
+                // Display the bag items
+                var bagContent = "";
+                bagItems.forEach(function (item) {
+                    bagContent += "<p>" + item.title + " - " + item.description + "</p>";
+                });
+                alert("Bag Items:\n" + bagContent);
+            } else {
+                // No items in the bag
+                alert("Your bag is empty.");
+            }
+        }
+    </script>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</body>
+
+</html>

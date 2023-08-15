@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clothing Website</title>
+    <style>
+        body {
+            background-image: url('https://wallpapercave.com/dwp1x/wp6947243.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: background-size 0.3s ease;
+        }
+        
+        .temp_container {
+            text-align: center;
+            margin-top: 50px;
+            background-color: rgba(255, 255, 255, 0);
+            padding: 20px;
+            border-radius: 4px;
+        }
+        
+        h1 {
+            font-size: 200px;
+            color: #333;
+            margin-bottom: 0px;
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            background-color: #333;
+            color: #fff;
+            border-radius: 4px;
+            transition: background-image 0.3s ease;
+        }
+        
+        .button:hover {
+            background-image: url('hover-background-image.jpg');
+        }
+
+
+
+             
+        </style>
+</head>
+<body>
+
+
+
+
+
+
+
+    <div class="temp_container">
+        <h1>Stitch</h1>
+        <div class="buttons">
+            <a href="menproduts.html" class="button" id="men-button">Shop for Men</a>
+            <a href="womenproduts.html" class="button" id="women-button">Shop for Women</a>
+            <a href="kidsproduts.html" class="button" id="kids-button">Shop for Kids</a>
+            <a href="kidsproduts.html" class="button" id="kids-button" onclick="viewBag()">View Bag</a>
+    </div>
+    <footer>
+        <p>&copy; 2023 Clothing Website. All rights reserved.</p>
+    </footer>
+
+
+
+
+
+
+
+
+<script>// Add event listeners for button hover
+    document.getElementById('men-button').addEventListener('mouseenter', function() {
+        document.body.style.backgroundImage = "url('https://wallpapercave.com/wp/wp8064975.jpg')";
+    });
+    
+    document.getElementById('women-button').addEventListener('mouseenter', function() {
+        document.body.style.backgroundImage = "url('https://wallpaperset.com/w/full/c/6/6/254991.jpg')";
+    });
+    document.getElementById('kids-button').addEventListener('mouseenter', function() {
+        document.body.style.backgroundImage = "url('https://wallpapercave.com/wp/wp8575701.jpg')";
+    });
+    
+    // Reset background image on mouse leave
+    document.getElementById('men-button').addEventListener('mouseleave', resetBackground);
+    document.getElementById('women-button').addEventListener('mouseleave', resetBackground);
+    document.getElementById('kids-button').addEventListener('mouseleave', resetBackground);
+    
+    function resetBackground() {
+        document.body.style.backgroundImage = "url('background-image.jpg')";
+    }
+
+
+    function viewBag() {
+        // Retrieve the bag items from local storage
+        var bagItems = JSON.parse(localStorage.getItem("bagItems"));
+
+        // Check if any items are in the bag
+        if (bagItems && bagItems.length > 0) {
+            // Display the bag items
+            var bagContent = "";
+            bagItems.forEach(function (item) {
+                bagContent += "<p>" + item.title + " - " + item.description + "</p>";
+            });
+            alert("Bag Items:\n" + bagContent);
+        } else {
+            // No items in the bag
+            alert("Your bag is empty.");
+        }
+    }
+
+    </script>
+</body>
+</html>
